@@ -10,10 +10,10 @@ public class Lab1 {
 
         int a1 = 1;
         int a6 = 11;
-        int differenceOfProgression = (a6 - a1) / (a6 - 1);
+        int differenceOfProgression = (a6 - a1) / (6 - 1);
 
         int n = 20;
-        int sumOfProgression = (n / 2) * (2 * a1 + (n - 1) * differenceOfProgression);
+        int sumOfProgression = (n * (2 * a1 + (n - 1) * differenceOfProgression)) / 2;
 
         System.out.println("Difference of progression: " + differenceOfProgression);
         System.out.println("Sum of twenty values of progression: " + sumOfProgression);
@@ -48,21 +48,26 @@ public class Lab1 {
 
     public static void sumOfExpression() {
         System.out.println("\nTASK 3");
+
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter ε: ");
+        double epsilon = scanner.nextDouble();
+        double sum = 0;
+        int k = 1;
 
-        int sum = 0;
-        System.out.println("Enter k and epsilon values: ");
-        int k = scanner.nextInt();
-        int epsilon = scanner.nextInt();
-
-        while (sum <= epsilon) {
-            sum += (2 * k * k + 7) / (8 * k);
+        while (true) {
+            double ak = (2 * Math.pow(k, 2) + 7) / (8 * k);
+            if (ak > epsilon) {
+                break;
+            }
+            sum += ak;
+            k++;
         }
 
         System.out.println("Sum: " + sum);
     }
 
-    public static void maxValueOfFunction() {
+    public static void fillEvenIndicesWithZeros() {
         System.out.println("\nTASK 4");
 
         int[] arr = new int[12];
@@ -78,7 +83,7 @@ public class Lab1 {
         System.out.println("Array with zeros at even elements: " + Arrays.toString(arr));
     }
 
-    public static void fillEvenIndicesWithZeros() {
+    public static void maxValueOfFunction() {
         System.out.println("\nTASK 5");
         double start = -1;
         double end = 3;
@@ -94,7 +99,7 @@ public class Lab1 {
         System.out.println("Max value: " + maxVal);
     }
 
-    public static void lab_info() {
+    public static void lab_demonstration() {
         calculateProgression();
         sortValues();
         sumOfExpression();

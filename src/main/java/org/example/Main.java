@@ -11,7 +11,7 @@ public class Main {
 
         switch (choise) {
             case 1:
-                Lab1.lab_info();
+                Lab1.lab_demonstration();
                 break;
             case 2:
                 break;
