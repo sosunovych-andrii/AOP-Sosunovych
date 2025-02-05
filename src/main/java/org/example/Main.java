@@ -1,5 +1,6 @@
 package org.example;
 import Lab1.Lab1;
+import Lab2.Lab2;
 
 import java.util.Scanner;
 
@@ -7,13 +8,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number of lab");
-        int choise = scanner.nextInt();
+        int choice = scanner.nextInt();
 
-        switch (choise) {
+        switch (choice) {
             case 1:
                 Lab1.lab_demonstration();
                 break;
             case 2:
+                Lab2.lab_demonstration();
                 break;
             default:
                 System.out.println("Invalid choice");
