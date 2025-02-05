@@ -16,18 +16,18 @@ public class Lab2 {
         }
 
         public double area() {
-            return this.a * this.b * Math.sin(Math.toRadians(this.angle));
+            return a * b * Math.sin(Math.toRadians(angle));
         }
 
-        public double getHeight() {
-            return this.area() / this.a;
+        public double height() {
+            return area() / a;
         }
 
         public double firstDiagonal() {
             return (
                     Math.sqrt(
-                            Math.pow(this.a, 2) + Math.pow(this.b, 2) +
-                                    2 * this.a * this.b * Math.cos(Math.toRadians(this.angle))
+                            Math.pow(a, 2) + Math.pow(b, 2) +
+                                    2 * a * b * Math.cos(Math.toRadians(angle))
                     )
             );
         }
@@ -35,8 +35,8 @@ public class Lab2 {
         public double secondDiagonal() {
             return (
                     Math.sqrt(
-                            Math.pow(this.a, 2) + Math.pow(this.b, 2) -
-                                    2 * this.a * this.b * Math.cos(Math.toRadians(this.angle))
+                            Math.pow(a, 2) + Math.pow(b, 2) -
+                                    2 * a * b * Math.cos(Math.toRadians(angle))
                     )
             );
         }
@@ -45,7 +45,7 @@ public class Lab2 {
 
     public static void lab_demonstration() {
         Parallelogram parallelogram = new Parallelogram(4, 6, 60);
-        System.out.println("Height is: " + parallelogram.getHeight());
+        System.out.println("Height is: " + parallelogram.height());
         System.out.println("First diagonal is: " + parallelogram.firstDiagonal());
         System.out.println("Second diagonal is: " + parallelogram.secondDiagonal());
     }
