@@ -42,6 +42,9 @@ public class Main {
             case 8:
                 Lab8.lab_demonstration();
                 break;
+            case 9:
+                // 9 лаба для настирливих студентиків)
+                break;
             case 10:
                 Lab10.lab_demonstration();
                 break;
