@@ -1,5 +1,6 @@
 package org.example;
 import Lab1.Lab1;
+import Lab10.Lab10;
 import Lab2.Lab2;
 import Lab3.Lab3;
 import Lab4.Lab4;
@@ -32,6 +33,9 @@ public class Main {
                 break;
             case 6:
                 Lab6.lab_demonstration();
+                break;
+            case 10:
+                Lab10.lab_demonstration();
                 break;
             default:
                 System.out.println("Invalid choice");
